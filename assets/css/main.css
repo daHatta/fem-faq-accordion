@@ -1,0 +1,248 @@
+/* ---------------- ABSTRACT ----------------- */
+/* 16px */
+/* ---------------- BASE ----------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ---------------- ABSTRACT ----------------- */
+body {
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("../../assets/images/background-pattern-mobile.svg");
+  background-repeat: repeat-x;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+
+h3, p {
+  margin-block-start: 0;
+}
+
+@media screen and (min-width: 648px) {
+  body {
+    background-image: url("../../assets/images/background-pattern-desktop.svg");
+  }
+}
+/* ---------------- UTILITIES ----------------- */
+/* ---------------- ABSTRACT ----------------- */
+.container {
+  margin-inline: auto;
+  width: 327px;
+}
+
+/* MEDIAQUERIES - Container */
+@media screen and (min-width: 648px) {
+  .container {
+    width: 600px;
+  }
+}
+/* ---------------- ABSTRACT ----------------- */
+.section {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  display: flow-root;
+  margin-block-start: 8.875em;
+  padding-block: 1.625em;
+  padding-inline: 1.5em;
+}
+
+.section-title {
+  background-image: url("../../assets/images/icon-star.svg");
+  background-position: top 5px left -1px;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  color: hsl(292, 42%, 14%);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-indent: 48px;
+}
+
+/* MEDIAQUERIES - Section */
+@media screen and (min-width: 648px) {
+  .section {
+    border-radius: 12px;
+    margin-block-start: 10.438em;
+    padding-block: 2.625em;
+    padding-inline: 2.625em;
+  }
+  .section-title {
+    background-position: top 11px left;
+    background-size: 42px 42px;
+    font-size: 3.625rem;
+    text-indent: 62px;
+  }
+}
+/* ---------------- COMPONENTS --------------------------- */
+/* ---------------- ABSTRACT ----------------- */
+.faq {
+  padding-block-start: 1.375em;
+}
+
+.faq h3 {
+  border-top: 2px solid hsl(275, 100%, 97%);
+  display: flow-root;
+  margin-block-end: 1.125em;
+  margin-block-start: 1em;
+  padding-block-start: 1em;
+}
+
+.faq h3:first-child {
+  border-top: 0;
+  margin-block-start: 0;
+  padding-block-start: 0;
+}
+
+.faq h3:last-of-type {
+  border-bottom: none;
+  margin-block-end: 0;
+  padding-block-end: 0;
+}
+
+.faq-trigger {
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  color: hsl(292, 42%, 14%);
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1;
+  min-height: 28px;
+  padding-inline: 0;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.faq-trigger:hover,
+.faq-trigger:focus-visible {
+  color: hsl(277, 82%, 54%);
+}
+
+.faq-question {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.faq-icon {
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: center right;
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
+}
+
+.faq-trigger[aria-expanded=true] .faq-icon {
+  background-image: url("../../assets/images/icon-minus.svg");
+}
+
+.faq-trigger[aria-expanded=false] .faq-icon {
+  background-image: url("../../assets/images/icon-plus.svg");
+}
+
+.faq-panel {
+  color: hsl(292, 16%, 49%);
+}
+
+.faq-answer {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MEDIAQUERIES - FAQ component */
+@media screen and (min-width: 648px) {
+  .faq {
+    padding-block-start: 2.125em;
+  }
+  .faq h3 {
+    margin-block-end: 1.25em;
+    margin-block-start: 1.25em;
+    padding-block-start: 1.25em;
+  }
+  .faq-question {
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

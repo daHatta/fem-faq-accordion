@@ -1,0 +1,19 @@
+{
+  "name": "fem-accordion-main",
+  "version": "1.0.0",
+  "description": "Frontend Mentor challenge 004: FAQ Accordion",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass --watch ./assets/css/main.scss ./assets/css/main.css",
+    "dev": "nodemon index.html --host:3000"
+  },
+  "keywords": [
+    "sass",
+    "js",
+    "aria",
+    "accessibility"
+  ],
+  "author": "Heiko John",
+  "license": "ISC"
+}

@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+.section {
+    background-color: $clr-ntl-white;
+    border-radius: 8px;
+    display: flow-root;
+    margin-block-start: 8.875em;
+    padding-block: 1.625em;
+    padding-inline: 1.5em;
+}
+
+.section-title {
+    background-image: url('../../assets/images/icon-star.svg');
+    background-position: top 5px left -1px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    color: $clr-pry-dark-purple;
+    font-size: 2rem;
+    font-weight: $fw-bold;
+    margin: 0;
+    text-indent: 48px;
+}
+
+/* MEDIAQUERIES - Section */
+@media screen and (min-width: 648px) {
+    .section {
+        border-radius: 12px;
+        margin-block-start: 10.438em;
+        padding-block: 2.625em;
+        padding-inline: 2.625em;
+    }
+
+    .section-title {
+        background-position: top 11px left;
+        background-size: 42px 42px;
+        font-size: 3.625rem;
+        text-indent: 62px;
+    }
+}

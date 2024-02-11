@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+body {
+    background-color: $clr-ntl-light-pink;
+    background-image: url('../../assets/images/background-pattern-mobile.svg');
+    background-repeat: repeat-x;
+    font-family: $ff-primary;
+    margin: 0;
+}
+
+h3, p {
+    margin-block-start: 0;
+}
+
+
+@media screen and (min-width: 648px) {
+    body {
+        background-image: url('../../assets/images/background-pattern-desktop.svg');
+    }
+}

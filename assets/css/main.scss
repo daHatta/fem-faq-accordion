@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+/* ---------------- ABSTRACT ----------------- */
+// VARIABLES
+@use 'abstracts';
+
+/* ---------------- BASE ----------------- */
+// RESET and COMMON
+@use 'base';
+
+/* ---------------- UTILITIES ----------------- */
+// CONTAINER and SECTION
+@use 'utilities';
+
+/* ---------------- COMPONENTS --------------------------- */
+// FAQ
+@use 'components';
