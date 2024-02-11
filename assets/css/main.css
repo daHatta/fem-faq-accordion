@@ -109,6 +109,7 @@ h3, p {
 .section {
   background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
+  box-shadow: 0px 18px 30px -3px rgba(160, 42, 234, 0.1);
   display: flow-root;
   margin-block-start: 8.875em;
   padding-block: 1.625em;
@@ -130,7 +131,7 @@ h3, p {
 /* MEDIAQUERIES - Section */
 @media screen and (min-width: 648px) {
   .section {
-    border-radius: 12px;
+    border-radius: 14px;
     margin-block-start: 10.438em;
     padding-block: 2.625em;
     padding-inline: 2.625em;
