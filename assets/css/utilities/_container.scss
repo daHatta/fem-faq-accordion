@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .container {
+    margin-block-start: 8.875em;
     margin-inline: auto;
     width: 327px;
 }
@@ -8,6 +9,7 @@
 /* MEDIAQUERIES - Container */
 @media screen and (min-width: 648px) {
     .container {
+        margin-block-start: 10.438em;
         width: 600px;
     }
 }

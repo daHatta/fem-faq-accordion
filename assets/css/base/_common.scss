@@ -4,11 +4,14 @@ body {
     background-color: $clr-ntl-light-pink;
     background-image: url('../../assets/images/background-pattern-mobile.svg');
     background-repeat: repeat-x;
+    display: flow-root;
     font-family: $ff-primary;
     margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
-h3, p {
+h1, h2, h3, p {
     margin-block-start: 0;
 }
 
